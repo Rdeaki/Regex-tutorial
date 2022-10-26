@@ -1,10 +1,16 @@
-# Title (replace with your title)
+# What is Regex?
 
-Introductory paragraph (replace this with your text)
+The best way i've seen regex summarized is "a string on steroids". A Regular expression is essentially a pattern that is matched against a subject string from left to right. Examples Regular expression uses are; to replace text within a string, validate forms, extract a substring from a string based on a pattern match, and many many more use cases. Developers love their abreviations, so the mouthful "regular expression" gets shortened to "regex" or "regexp".
 
-## Summary
+## Password pattern matching
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+I know everyone under the age of 105 has seen the message: "Your password must contain at least 8 characters, an upper case letter, and a number." Aside from casuing you to forget the password immediatly after creating your account, this phrase also describes a pattern you need to follow in order for you to provide a valid password. From a developers perspective, you could write some javascript to validate the users input OR you could write a single line of code to descibe the entire pattern. Take it away Regex:
+
+```
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/g
+```
+
+        Include a code snippet of the regex. Replace this text with your summary.
 
 ## Table of Contents
 
