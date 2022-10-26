@@ -10,8 +10,6 @@ I know everyone under the age of 105 has seen the message: "Your password must c
 /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/g
 ```
 
-        Include a code snippet of the regex. Replace this text with your summary.
-
 ## Table of Contents
 
 - [Anchors](#anchors)
@@ -30,9 +28,22 @@ I know everyone under the age of 105 has seen the message: "Your password must c
 
 ### Anchors
 
+/`^`(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$`/`g
+
+Anchors in regular expressions serve as indicators for the beginning and the end of a regex.
+
+- The `^` represents the beginning of a string or line.
+- The `$` represents the end of that string/line.
+
 ### Quantifiers
 
-### OR Operator
+/^(`?`=.`*`[a-z])(`?`=.`*`[A-Z])(`?`=.`*`\d)(`?`=.`*`\W).`{8,}`$/g
+
+Quantifiers indicate that the preceding character must be matched a certain number of times. Essentially how many characters we need. By default quantifiers are "greedy" and will try to match as many characters as possible, unless specified.
+
+- `{8,}` Matches the specified quantity of the previous character. {8,} will match to 8 or more characters.
+- `?` effectively makes the character optional. In our instance the option will be lowercase, uppercase, and number options for our passowd.
+- `*` Matches 0 or more of the preceding character.
 
 ### Character Classes
 
