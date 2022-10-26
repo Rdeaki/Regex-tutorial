@@ -47,19 +47,24 @@ Quantifiers indicate that the preceding character must be matched a certain numb
 
 ### Character Classes
 
-### Flags
+/^(?=`.`*`[a-z]`)(?=`.`*`[A-Z]`)(?=`.`*`\d`)(?=`.`*`\W`)`.`{8,}$/g
 
-### Grouping and Capturing
-
-### Bracket Expressions
+- `[a-z]` , `[A-Z]` matches any characters within the specified range. In our instance its any lower or upcase letter in the alphabet.
+- `.` indicates that a character must have something before or after it. AKA no spaces allowed in our password.
+- `\W` matches any non alphabetical word character (a-z), example characters (!,^#$@)
+- `\d` matches any numeric value (0-9)
 
 ### Greedy and Lazy Match
 
-### Boundaries
-
-### Back-references
+greedy and lazy dictate what is returned from a matching pattern. As mentioned above, by default quantifiers are greedy. `*` is the default greedy, it will continue for each subsequent matching charcater. `?` will stop after the first instance.
 
 ### Look-ahead and Look-behind
+
+/^`(?=.*[a-z])``(?=.*[A-Z])``(?=.*\d)``(?=.*\W)`.{8,}$/g
+
+There's a few different lookaround operators, but for our instance well focus on one. The highlighted regex snippets above are posotive lookaheads, they match a group after the main expression without including it in the result. A simple way to break it down: `X(?=Y)` will match any instance of X that is followed by Y.
+
+
 
 ## Author
 
